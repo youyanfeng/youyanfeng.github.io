@@ -1,0 +1,758 @@
+/* 初始化 */
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	text-decoration: none;
+	line-height: 2em;
+}
+a {
+	color: #2279BD;
+}
+/* 字体图标 */
+@font-face {
+	font-family: 'iconfont';
+	/* project id 1277788 */
+	src: url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.eot');
+	src: url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.eot?#iefix') format('embedded-opentype'),
+		url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.woff2') format('woff2'),
+		url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.woff') format('woff'),
+		url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.ttf') format('truetype'),
+		url('//at.alicdn.com/t/font_1277788_xcgm2svfsi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 80px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #4AA0DD;
+}
+/* 主体部分 */
+.whole {
+	height: 100%;
+	position: relative;
+}
+/* 侧边栏开启按钮 */
+.whole .main .open {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	color: #2279BD;
+	font-weight: 1000;
+}
+
+.whole .main .open a span {
+	font-size: 20px;
+}
+
+.whole .main .open a {
+	display: inline-block;
+	color: #2279BD;
+	background: #FFFFFF;
+	padding: 20px;
+}
+
+/* 侧边栏 */
+/* 侧边栏固定 */
+.sidebar {
+	position: fixed;
+	z-index: 99;
+	display: inline-block;
+	height: 100vh;
+	background-color: #2279BD;
+}
+/* 侧边栏关闭按钮 */
+.sidebar .shut {
+	position: absolute;
+	z-index: 999;
+	display: inline-block;
+	width: 100%;
+	color: #2279BD;
+	background: #FFFFFF;
+}
+
+.sidebar .shut a {
+	/* box-sizing: border-box; */
+	padding: 10px 42%;
+	display: inline-block;
+	color: #2279BD;
+	background: #FFFFFF;
+	font-weight: 1000;
+}
+
+.sidebar .shut a span {
+	font-size: 20px;
+}
+/* 侧边栏图片 */
+.Headportrait {
+	width: 100%;
+	margin: 60px 0 0;
+	text-align: center;
+}
+
+.Headportrait img {
+	width: 50%;
+	border-radius: 10%;
+}
+/* 侧边栏文字 */
+.Name h4 {
+	font-size: 1.5em;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.Name p {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.Name {
+	margin: 10px 0 40px;
+}
+/* 侧边栏导航按钮 */
+ul {
+	list-style: none;
+	text-align: center;
+}
+
+.list li a {
+	display: inline-block;
+	color: #FFFFFF;
+	border-top: 1px solid rgba(255, 255, 255, .3);
+	padding: 18px 0;
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+	transition: background 0.7s, color 0.7s;
+}
+
+.list li a:hover {
+	color: #0056b3;
+	background: #FFFFFF;
+	text-decoration: none;
+}
+
+#list-a4 {
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+/* 侧边栏导航按钮切换样式 */
+.active {
+	background: #FFFFFF;
+	color: #2279BD !important;
+}
+
+.none {
+	background: #2279BD;
+	color: #FFFFFF;
+}
+/* 侧边栏导航分享按钮 */
+.icon {
+	margin-top: 13%;
+}
+
+.icon li {
+	display: inline-block;
+	list-style: none;
+}
+
+.icon li a {
+	background: rgba(0, 0, 0, .2);
+	padding: 9px 11px;
+	text-decoration: none;
+	transition: background 0.7s, color 0.7s;
+	color: #FFFFFF;
+}
+
+.icon span {
+	font-size: 13px;
+}
+
+.icon li a:hover {
+	background: #FFFFFF;
+	color: #2279BD;
+}
+
+/* 主体部分 */
+.main {
+	position: relative;
+	width: 63%;
+	left: 31%;
+}
+/* 第一张大图 */
+.top-picture img {
+	width: 100%;
+}
+
+.top-picture {
+	position: relative;
+	width: 100%;
+}
+/* 第一部分  介绍 */
+.introduce {
+	padding: 60px 0 40px 0;
+	color: #FFFFFF;
+}
+
+.introduce h2 {
+	font-size: 32px;
+	color: #FFFFFF;
+	margin: 0 0 8px;
+}
+/* 分割线 */
+hr {
+	max-width: 500px;
+	height: 2px;
+	background-color: #FFFFFF;
+	margin: 20px 0;
+}
+
+*p {
+	letter-spacing: 1px;
+	line-height: 2em;
+}
+/* 第一部分 网页设计 */
+.introduce-2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.introduce-2 h5 {
+	font-size: 28px;
+	color: #FFFFFF;
+	margin-bottom: 8px;
+}
+
+.introduce-2 p {
+	margin: 20px 0 16px;
+	color: #FFFFFF;
+}
+
+.introduce-2-2 {
+	position: relative;
+	display: inline-block;
+	width: 65%;
+	margin: 0;
+}
+
+.top-picture2 {
+	position: relative;
+	display: inline-block;
+	width: 30%;
+}
+
+.top-picture2 img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+/* 第一部分  按钮 */
+.introduce-Botton {
+	display: inline-block;
+	margin-top: 2%;
+	color: #2279BD;
+	background-color: #FFFFFF;
+	padding: 12px 22px;
+	transition: background-color 0.5s;
+}
+
+.introduce-Botton a {
+	transition: color 0.5s;
+}
+
+.introduce-Botton:hover {
+	background-color: #2279BD;
+}
+
+.introduce-Botton:hover a {
+	color: #FFFFFF;
+}
+/* 分割线 */
+.Partitionline {
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background-color: rgba(250, 250, 250, 0.2);
+	margin: 50px 0;
+}
+/* 第二部分 */
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.content-img {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+
+.content-img img {
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.content-word {
+	vertical-align: top;
+	max-width: 63%;
+	display: inline-block;
+	margin: 0 0 0 25px;
+}
+
+.content-word>h4 {
+	font-size: 28px;
+	color: #FFFFFF;
+	margin: 0 0 8px;
+}
+
+.content-word p {
+	margin: 20px 0 16px;
+	color: #FFFFFF;
+}
+
+.content-bottom {
+	color: #2279BD;
+	display: inline-block;
+	background-color: #FFF;
+	padding: 12px 22px;
+	margin-top: 30px;
+	transition: background-color 0.5s;
+}
+
+.content-bottom a {
+	transition: color 0.5s;
+}
+
+.content-bottom:hover {
+	background-color: #2279BD;
+}
+
+.content-bottom:hover a {
+	color: #FFF;
+}
+
+.Partitionline2 {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	margin: 60px 0;
+}
+/* 大方块 */
+.content2 {
+	width: 100%;
+}
+
+.content2>h2 {
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+.content2>p {
+	margin: 5px 0;
+	color: #FFFFFF;
+}
+
+.BigIcon {
+	width: 100%;
+	min-height: 90vh;
+	display: flex;
+	color: #FFFFFF;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.BigIcon1 h4 {
+	font-size: 28px;
+	padding: 0 0 8px 0;
+}
+
+.BigIcon1 {
+	width: 49.5%;
+	height: 15%;
+	margin: 0 0 10px 0;
+	background-color: rgba(250, 250, 250, .1);
+	box-sizing: border-box;
+	padding: 50px;
+	transition: background-color 0.7s, color 0.7s;
+}
+
+.BigIcon1:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+/* 照片墙上面的字体 */
+.Flip h2 {
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+.Flip p {
+	color: #FFFFFF;
+	font-size: 14px;
+}
+/* 照片墙 */
+.tabcontent {
+	margin: 35px 0;
+	position: relative;
+}
+
+.animation {
+	width: 100%;
+	margin: 50PX auto;
+	text-align: center;
+}
+
+.animation ul {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.animation ul li {
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 0;
+	margin: 0 10px;
+}
+
+ .animation .tabcontent .selector{
+	display: flex !important;
+}
+
+.tabcontent>div {
+	display: none !important;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4 {
+	width: 100%;
+}
+
+.animation .tabmenu li {
+	color: #FFFFFF;
+}
+
+.active2 {
+	color: #2279BD !important;
+	border-bottom: 2px solid #2279BD;
+}
+
+.none2 {
+	color: #FFFFFF;
+}
+
+.tabcontent #tab1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.tabcontent .tab_content .aii1,
+.aii4,
+.aii5 {
+	position: relative;
+	margin-right: 18px;
+	animation: name 0.5s !important;
+	width: 32%;
+	height: 65%;
+}
+
+.tabcontent .tab_content .aii2,
+.aii3,
+.aii6 {
+	position: relative;
+	margin-right: 18px;
+	animation: name 1s !important;
+	width: 32%;
+	height: 30%;
+}
+
+.animation .tabcontent .tab_content img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.animation .tabcontent .tab_content .sap1,
+.sap2,
+.sap3,
+.sap4,
+.sap5,
+.sap6 {
+	position: absolute;
+	border-radius: 5px;
+	right: 0%;
+	bottom: 0%;
+	opacity: 0.3;
+	background: #FFFFFF;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+@keyframes name {
+	from {
+		transform: scale(0);
+
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.tabcontent .tab_content .aii1:hover .sap1,
+.aii2:hover .sap2,
+.aii3:hover .sap3,
+.aii4:hover .sap4,
+.aii5:hover .sap5,
+.aii6:hover .sap6 {
+	transform: scale(0.85);
+	opacity: 0.9;
+}
+
+.tabcontent .tab_content .aii1 .sap1 span,
+.tabcontent .tab_content .aii4 .sap4 span,
+.tabcontent .tab_content .aii5 .sap5 span {
+	display: inline-block;
+	margin: 35% 0 10%;
+	font-size: 30px;
+	color: #FFFFFF;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: #2279BD;
+	border-radius: 5px;
+}
+
+.tabcontent .tab_content .aii2 .sap2 span,
+.tabcontent .tab_content .aii3 .sap3 span,
+.tabcontent .tab_content .aii6 .sap6 span {
+	display: inline-block;
+	margin: 10% 0 5%;
+	font-size: 30px;
+	color: #FFFFFF;
+	width: 60px;
+	height: 60px;
+	padding: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: #2279BD;
+	border-radius: 5px;
+}
+
+.tabcontent .tab_content div h1 {
+	color: #000000;
+	font-size: 30px;
+	font-weight: 700;
+}
+.contact{
+	position: relative;
+	margin-top: 50px;
+}
+.contact .contact1 h1,
+.contact .contact1 p {
+	color: #FFFFFF;
+}
+
+.contact .Input-box {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 500px;
+}
+
+.contact .Input-box #box1,
+#box2,
+#box3,
+#box4 {
+	width: 46.5%;
+	height: 45px;
+	font-size: 14px;
+	padding-left: 15px;
+	color: rgba(250, 250, 250, .7);
+	background: rgba(250, 250, 250, .1);
+	border: 1px solid rgba(250, 250, 250, .7);
+}
+
+.contact .Input-box #box3 {
+	width: 100%;
+}
+
+.contact .Input-box #box4 {
+	width: 100%;
+	padding: 0 0 13% 15px;
+}
+
+input::-webkit-input-placeholder {
+	color: rgba(250, 250, 250, .7);
+}
+
+.contact .Input-box #submit {
+	padding: 0 15px;
+	display: inline-block;
+	color: #2279BD;
+	font-size: 14px;
+	font-weight: 800;
+	border: none;
+	margin-bottom: 80px;
+	background: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	transition: background 0.5s, color 0.5s;
+}
+
+.contact .Input-box #submit:hover {
+	background: #2279BD;
+	color: #FFFFFF;
+}
+
+@media screen and (min-width: 1280px) {
+	.sidebar {
+		width: 22%;
+		margin: 0 4%;
+	}
+	.animation .tabcontent .selector {
+		display: flex !important;
+	}
+	.whole .main .open,
+	.sidebar .shut {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 1280px) and (min-width: 864px) {
+	.sidebar {
+		width: 26%;
+		margin: 0;
+	}
+	.animation .tabcontent .selector {
+		display: flex !important;
+	}
+	.whole .main .open,
+	.sidebar .shut{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 864px){
+	.sidebar {
+		width: 40%;
+		margin: 0;
+		display: none;
+	}
+	.main {
+		left: auto;
+		margin: 0 auto;
+		min-width: 80%;
+		padding: 20px;
+	}
+
+	.whole .main .open {
+		display: inline-block;
+	}
+
+	}
+@media screen and (max-width: 770px){
+	.top-picture2 {
+		width: 100%;
+		margin-top: 5%;
+	}
+	.introduce-2-2 {
+		width: 100%;
+	}
+	.content-img {
+		width: 100%;
+	}
+	.content-img img{
+		width: 100%;
+	}
+	.content-word {
+		max-width: 100%;
+		margin: 0 0 0 25px;
+	}
+	.BigIcon {
+		width: 100%;
+		color: #FFFFFF;
+	}
+	.BigIcon1 {
+		width: 100%;
+		color: #FFFFFF;
+	}
+	
+	.contact .Input-box {
+		display: inline-block;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+	.contact .Input-box #box1,
+	#box2,
+	#box3,
+	#box4 {
+		width: 100%;
+		height: 45px;
+		box-sizing: border-box;
+		margin-bottom: 40px;
+		font-size: 14px;
+		padding-left: 15px;
+	}
+	
+	.contact .Input-box #box3 {
+		width: 100%;
+	}
+	
+	.contact .Input-box #box4 {
+		width: 96%;
+		box-sizing: content-box;
+		padding: 0 0 20% 15px;
+	}
+	}
+@media screen and (max-width: 600px){
+	.icon {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.icon li{
+		margin-bottom: 25%;
+	}
+	.tabcontent div figure{
+		width: 100% !important;
+		margin-top: 10%;
+	}
+
+	.contact .Input-box {
+		margin-top: 40px;
+		width: 100%;
+	}
+	.animation .tabcontent .selector {
+		display: inline-block !important;
+	}
+	}
+	
